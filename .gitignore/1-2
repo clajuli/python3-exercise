@@ -1,0 +1,25 @@
+money = 1000
+items = {'apple': 100, 'banana': 200, 'orange': 400}
+for item_name in items:
+    print('--------------------------------------------------')
+    print('You have ' + str(money) + ' dollars')
+    print(item_name + ' is ' + str(items[item_name]) + ' dollars each')
+    
+    input_count = input('How many ' + item_name + ' you want to buy：')
+    print('The quantity of ' + item_name + ' is ' + input_count + '.')
+    
+    count = int(input_count)
+    total_price = items[item_name] * count
+    print('The total amount is ' + str(total_price) + ' dollars.')
+    
+    if money >= total_price:
+        print(item_name + ': ' + input_count + ' is/are bought.')
+        money -= total_price
+        
+        if money == 0:
+            print('You used all the money.')
+            break
+    else:
+        print('You do not have enough money.')
+        print(item_name + ' could not be bought.')
+print('You have ' + str(money) + ' dollars left.')
