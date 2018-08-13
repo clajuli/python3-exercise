@@ -1,0 +1,21 @@
+#練習記録
+
+apple_price=200
+money = 1000
+input_count=input("How many apples you are buying:")
+count=int(input_count)
+total_price=apple_price*count
+
+print("You buy "+str(count)+" apple(s).")
+print("You pay "+str(total_price)+" dollars.")
+
+
+if money > total_price:
+    print(str(count)+" apple(s) is/are bought.")
+    print("You have "+str(money-total_price)+" dollars left.")
+elif money == total_price:
+    print(str(count)+" apples are bought.")
+    print("You have no dollars in your pocket.")
+else:
+    print("You don't have enough money.")
+    print("You were not able to purchase apples.")
